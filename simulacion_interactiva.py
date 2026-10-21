@@ -438,11 +438,10 @@ def mk_btn(rect, label, fc="#181c3b", tc="#00e5ff"):
     return btn
 
 # Fila 1 de botones: Controles de reproducción
-btn_play = mk_btn([0.50, 0.32, 0.09, 0.038], "|| Pausar")
-btn_step = mk_btn([0.60, 0.32, 0.08, 0.038], ">> Paso")
-btn_rst  = mk_btn([0.69, 0.32, 0.09, 0.038], "Reiniciar", tc="#4ade80")
-btn_tr   = mk_btn([0.79, 0.32, 0.09, 0.038], "Estela: Rec.", tc="#fbbf24")
-btn_gif  = mk_btn([0.89, 0.32, 0.09, 0.038], "Guardar GIF", tc="#f43f5e")
+btn_play = mk_btn([0.50, 0.32, 0.11, 0.038], "|| Pausar")
+btn_step = mk_btn([0.625, 0.32, 0.11, 0.038], ">> Paso")
+btn_rst  = mk_btn([0.75, 0.32, 0.11, 0.038], "Reiniciar", tc="#4ade80")
+btn_tr   = mk_btn([0.875, 0.32, 0.105, 0.038], "Estela: Rec.", tc="#fbbf24")
 
 # Fila 2 de botones: Casos Límite de Interés
 btn_c0 = mk_btn([0.50, 0.23, 0.09, 0.034], "1. Examen Base")
@@ -484,15 +483,6 @@ def alternar_estela(event):
     lbl_map = {"reciente": "Estela: Rec.", "completa": "Estela: Full", "off": "Estela: Off"}
     btn_tr.label.set_text(lbl_map[_trail_mode[0]])
     fig.canvas.draw_idle()
-
-def exportar_gif(event):
-    fname = os.path.join(os.path.dirname(os.path.abspath(__file__)), "resorte_simulacion.gif")
-    print(f"Exportando GIF a {fname} ... (espera unos segundos)")
-    try:
-        ani.save(fname, writer="pillow", fps=30, dpi=80)
-        print(f"GIF guardado exitosamente: {fname}")
-    except Exception as e:
-        print(f"Error guardando GIF: {e}")
 
 # Callbacks para los casos límite
 def fijar_parametros(m_val, k_val, R_val, l0_val, g_val, th0_val, vth0_val, dr0_val, vr0_val):
@@ -541,7 +531,6 @@ btn_play.on_clicked(toggle_play)
 btn_step.on_clicked(paso_a_paso)
 btn_rst.on_clicked(resetear_tiempo)
 btn_tr.on_clicked(alternar_estela)
-btn_gif.on_clicked(exportar_gif)
 
 btn_c0.on_clicked(preset_base)
 btn_c1.on_clicked(preset_rigido)
