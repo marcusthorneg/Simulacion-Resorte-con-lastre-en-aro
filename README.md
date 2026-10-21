@@ -4,22 +4,7 @@
 **Convocatoria:** Curso 2025–2026 (Ejercicio 1)  
 **Autor:** Marcus Thorne y José Carlos Arévalo
 
----
-
-## 1. Descripción del Sistema Físico
-
-El sistema consiste en un aro circular rígido vertical de radio $R$ fijo en el plano cartesiano $Oxy$ con centro en el origen $O(0,0)$. Sobre el aro desliza sin rozamiento el punto de enganche $A$ de un resorte ideal de constante elástica $k$, longitud natural $l_0$ y masa despreciable. En el otro extremo del resorte pende una masa puntual $m$, sometida a la acción de la gravedad uniforme $\vec{g} = -g\,\hat{\jmath}$.
-
-* **Grados de libertad:** $l = 2$.
-* **Coordenadas generalizadas:** $q = (r, \theta)$, donde $r(t)$ es la longitud instantánea del resorte (elongación $\Delta l = r - l_0$) y $\theta(t)$ es el ángulo respecto a la vertical descendente.
-* **Función Lagrangiana:**
-  $$L(r, \theta, \dot{r}, \dot{\theta}) = \frac{1}{2}m\left[ \dot{r}^2 + (R + r)^2\dot{\theta}^2 \right] - \frac{1}{2}k(r - l_0)^2 + mg(R + r)\cos\theta$$
-* **Fuerza de ligadura normal del aro:** Obtenida mediante multiplicadores de Lagrange con la ligadura holónoma $f(\rho_A) = \rho_A - R = 0$:
-  $$\vec{N}_{\text{aro}} = \lambda(t)\,\hat{u}_r = -k(r - l_0)\,\hat{u}_r$$
-
----
-
-## 2. Requisitos e Instalación
+## 1. Requisitos e Instalación
 
 Para ejecutar la simulación se requiere **Python 3.8 o superior** y las bibliotecas científicas estándar listadas en `requirements.txt`.
 
@@ -36,7 +21,7 @@ pip install -r requirements.txt
 
 ---
 
-## 3. Instrucciones de Ejecución
+## 2. Instrucciones de Ejecución
 
 ### Simulación Interactiva Principal
 Para abrir la interfaz gráfica interactiva en tiempo real:
@@ -59,7 +44,7 @@ python simulacion_interactiva.py
 
 ---
 
-## 4. Estudio Numérico y de Parámetros
+## 3. Estudio Numérico y de Parámetros
 
 El script `estudio_sistematico.py` complementa la simulación interactiva resolviendo numéricamente las ecuaciones diferenciales de Euler-Lagrange bajo distintos escenarios:
 ```bash
@@ -74,7 +59,7 @@ Este script realiza barridos sistemáticos para analizar:
 
 ---
 
-## 5. Estructura del Repositorio
+## 4. Estructura del Repositorio
 
 ```text
 ├── simulacion_interactiva.py     # Programa ejecutable principal (interfaz interactiva a 60 FPS)
