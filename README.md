@@ -2,7 +2,7 @@
 ### Trabajo de Simulación Numérica — Mecánica y Ondas I
 **Grado en Física — Universidad de Córdoba (UCO)**  
 **Convocatoria:** Curso 2025–2026 (Ejercicio 1)  
-**Autor:** Marcus
+**Autor:** Marcus Thorne y José Carlos Arévalo
 
 ---
 
