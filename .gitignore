@@ -14,7 +14,7 @@ ehthumbs.db
 *.sublime-project
 *.sublime-workspace
 
-# LaTeX auxiliary files
+# LaTeX and report files
 *.aux
 *.log
 *.out
@@ -22,3 +22,15 @@ ehthumbs.db
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+*.pdf
+*.tex
+*.png
+*.gif
+*.zip
+*.txt
+
+# Scratch scripts
+check_*.py
+test_*.py
+verify_*.py
+make_*.py
