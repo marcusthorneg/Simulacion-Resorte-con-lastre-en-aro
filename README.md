@@ -2,7 +2,7 @@
 ### Trabajo de Simulación Numérica — Mecánica y Ondas I
 **Grado en Física — Universidad de Córdoba (UCO)**  
 **Convocatoria:** Curso 2025–2026 (Ejercicio 1)  
-**Autor:** Marcus Thorne y José Carlos Arévalo
+**Autores:** Marcus Thorne y José Carlos Arévalo
 
 ## 1. Requisitos e Instalación
 
@@ -39,7 +39,7 @@ python simulacion_interactiva.py
   * **Sin Gravedad ($g = 0$):** Coordenada $\theta$ cíclica; muestra la conservación estricta del momento angular canónico $p_\theta = m(R+r)^2\dot{\theta}$.
   * **Péndulo Elástico ($R \to 0$):** El radio del aro se anula y el sistema converge a un péndulo elástico suspendido del origen fijo $O(0,0)$.
   * **Resonancia 1:2:** Ajuste para observar transferencia periódica de energía entre modos ($\omega_r \approx 2\omega_\theta$).
-* **Telemetría HUD:** Monitoreo dinámico de coordenadas $(r, \theta)$, velocidades, energías ($T, V, E$), error relativo de conservación $\Delta E/E_0$, fuerza normal $\lambda$ y momento angular canónico $p_\theta$.
+* **Panel de variables:** Monitoreo dinámico de coordenadas $(r, \theta)$, velocidades, energías ($T, V, E$), error relativo de conservación $\Delta E/E_0$, fuerza normal $\lambda$ y momento angular canónico $p_\theta$.
 * **Vector de Reacción:** Flecha magenta que representa en todo momento la fuerza vincular normal $\vec{N}_{\text{aro}}$ que el aro ejerce sobre el punto de enganche.
 
 ---
@@ -62,7 +62,7 @@ Este script realiza barridos sistemáticos para analizar:
 ## 4. Estructura del Repositorio
 
 ```text
-├── simulacion_interactiva.py     # Programa ejecutable principal (interfaz interactiva a 60 FPS)
+├── simulacion_interactiva.py     # Programa ejecutable principal (interfaz gráfica interactiva)
 ├── estudio_sistematico.py        # Script para la resolución numérica y análisis de parámetros
 ├── requirements.txt              # Dependencias de Python necesarias (numpy, scipy, matplotlib)
 ├── README.md                     # Documentación e instrucciones de uso
